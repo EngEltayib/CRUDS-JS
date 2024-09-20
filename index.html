@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUDS</title>
+    <!-- bootstrap file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- main style file -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="text-center mt-5 title" id="title-area">
+      <p class="TOP">Created by Altayeb & AY25</p>
+      <h1>CRUDS</h1>
+      <p>CREAT READ UPDATE DELETE SEARCH</p>
+    </section>
+    <section class="container text-light" id="inputs-area">
+      <section id="product-name">
+        <label for="productName" class="form-label">Product Name</label>
+        <input
+          type="text"
+          class="form-control py-3 border-0 text-light"
+          name="title"
+          id="productName"
+          placeholder="title"
+        />
+      </section>
+      <!-- get price , taxes , ads , discounts , calc total price -->
+      <div class="d-flex gap-2 my-3 flex-wrap" id="price-">
+        <section class="input-box flex-grow-1">
+          <label for="price" class="form-label">Price</label>
+          <input
+            type="number"
+            class="col form-control py-3 border-0 text-light"
+            id="price"
+            placeholder="price"
+            min="0"
+          />
+        </section>
+        <section class="input-box flex-grow-1">
+          <label for="taxes" class="form-label">Taxes</label>
+          <input
+            type="number"
+            class="col form-control py-3 border-0 text-light"
+            id="taxes"
+            placeholder="taxes"
+            min="0"
+          />
+        </section>
+        <section class="input-box flex-grow-1">
+          <label for="ads" class="form-label">ADS</label>
+          <input
+            type="number"
+            class="col form-control py-3 border-0 text-light"
+            id="ads"
+            placeholder="ads"
+            min="0"
+          />
+        </section>
+        <section class="input-box flex-grow-1">
+          <label for="discount" class="form-label">Discount</label>
+          <input
+            type="number"
+            class="col form-control py-3 border-0 text-light"
+            id="discount"
+            placeholder="discount"
+            min="0"
+          />
+        </section>
+        <section class="input-box flex-grow-1">
+          <label for="total" class="form-label">Total</label>
+          <input
+            type="number"
+            class="col form-control py-3 border-0 text-light"
+            id="total"
+            placeholder="total"
+            disabled
+            min="0"
+          />
+        </section>
+      </div>
+      <!-- appear if total value is less than 0 or equal to 0 -->
+      <p id="error-message" class="heddin" style="color: red">
+        please check your values that it is valed !
+      </p>
+      <!-- count of products & category -->
+      <section class="mb-3" id="product-count-container">
+        <label for="count" class="form-label">Count</label>
+        <input
+          type="number"
+          class="form-control py-3 border-0 text-light"
+          name="count"
+          id="count"
+          placeholder="max number of products is 100 product"
+        />
+      </section>
+      <section class="mb-3">
+        <label for="category" class="form-label">Category</label>
+        <input
+          type="text"
+          class="form-control py-3 border-0 text-light"
+          name="category"
+          id="category"
+          placeholder="category"
+        />
+      </section>
+      <section class="d-flex mb-3 gap-2 flex-column">
+        <button class="btn text-light" id="creat">Create</button>
+        <p class="heddin" id="fill-required-fields" style="color: red">
+          You Must Fill All Required Fields Please Which Is Marked With This
+          Mark (!)
+        </p>
+        <button class="btn text-light" id="display">Show Data</button>
+        <button class="btn text-light" id="hidde-data">Hidde Data</button>
+      </section>
+      <section class="mb-3">
+        <label for="search" class="form-label">Search</label>
+        <input
+          type="text"
+          class="form-control py-3 border-0 text-light"
+          name="search"
+          id="search"
+          placeholder="search..."
+        />
+      </section>
+      <section class="d-flex mb-2 gap-2 flex-column flex-md-row gap-md-5">
+        <button class="col btn text-light" id="search-by-title">
+          Search By Title
+        </button>
+        <button class="col btn text-light" id="search-by-category">
+          Search By Category
+        </button>
+      </section>
+      <section class="mb-3">
+        <button class="btn text-light w-100" id="delete-all-products">
+          Delete All ( <span id="products-count">0</span> )
+        </button>
+      </section>
+      <!-- table to display all products data -->
+      <section id="table-container">
+        <table class="table text-center" id="table-area">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>TITLE</th>
+              <th>PRICE</th>
+              <th>TAXES</th>
+              <th>ADS</th>
+              <th>DISCOUNT</th>
+              <th>TOTAL</th>
+              <th>CATEGORY</th>
+              <th>UPDATE</th>
+              <th>DELETE</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </section>
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

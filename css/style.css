@@ -1,0 +1,98 @@
+/* start glopal rouls */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #222;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.heddin {
+  display: none;
+}
+
+.visalbe {
+  display: block;
+}
+
+input::placeholder {
+  color: gray !important;
+}
+
+.TOP::selection {
+  color: red;
+  background-color: black;
+}
+
+img {
+  max-width: 100px;
+}
+/* end glopal rouls */
+/* start title section */
+#title-area .title h1 {
+  font-weight: bold;
+  margin: 0;
+}
+
+#title-area .title p {
+  font-size: 20px;
+}
+/* start inputs section */
+#inputs-area input.form-control {
+  background-color: #111;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#inputs-area input.form-control:focus {
+  background-color: #111;
+}
+
+#inputs-area button.btn {
+  background-color: rgb(58 24 119);
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+#inputs-area button.btn:hover {
+  background-color: rgb(88, 22, 210);
+  transform: scale(1.05);
+}
+/* error messages in form section */
+#inputs-area p#fill-required-fields {
+  color: red;
+}
+/* start table section */
+@media (max-width: 991px) {
+  #table-container {
+    overflow-x: scroll;
+  }
+}
+
+#table-area table.table thead th {
+  background-color: transparent;
+  color: white;
+}
+
+#table-area.table > :not(caption) > * > * {
+  background-color: transparent;
+  color: white;
+  vertical-align: middle;
+}
+
+#table-area input::placeholder {
+  color: red;
+  opacity: 1; /* Firefox */
+}
